@@ -10,7 +10,7 @@ document.getElementById('requestOTP').addEventListener('click', function() {
     // Generate dan menampilkan OTP 6 digit random
     var otp = generateOTP();
     // Mendefinisikan pesan yang akan dikirim ke WhatsApp
-    var message = `Halo,\n\nOTP: ${otp}\nSilahkan kirim pesan ini dan kembali lalu masukkan OTP untuk login.`;
+    var message = `Halo, Saya Minta OTP.`;
     // Membuat link untuk WhatsApp
     var waLink = `https://wa.me/62895613193050?text=${encodeURIComponent(message)}`;
     // Membuka link WhatsApp di jendela baru

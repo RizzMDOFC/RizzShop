@@ -1,0 +1,50 @@
+/* Gaya untuk header */
+header {
+    background-color: #128C7E; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    padding: 10px 0; /* Padding atas dan bawah */
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Posisikan logo dan menu secara vertikal di tengah header */
+    justify-content: space-between; /* Menyebarkan elemen di dalam container */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Menghapus margin default dari ul */
+}
+
+nav ul li {
+    display: inline-block; /* Menampilkan menu secara horizontal */
+    margin-right: 20px; /* Jarak antara menu */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Gaya untuk ikon */
+.fa {
+    font-size: 24px;
+}
+
+/* Gaya untuk teks di bawah ikon */
+.icon-text {
+    font-size: 12px;
+    display: block; /* Membuat teks menjadi blok untuk menempatkannya di bawah ikon */
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#0066cc" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="dashboard">
+    <h2>Produk</h2>
+    <div class="products">Belum ada produk ditampilkan.</div>
+  </div>
+
+  <div class="akun" style="display:none; padding: 20px; text-align: center;">
+    <h2>Informasi Akun</h2>
+    <p id="userInfo">Memuat informasi...</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="footer-spacer"></div> <!-- Tambahkan spacer di sini -->
+
+  <div class="footer-bar">
+    <a href="#history" class="footer-history">
+      <img src="img/history.png" alt="History">
+      <span>History</span>
+    </a>
+
+    <div class="footer-center">
+      <a href="#home" class="footer-logo">
+        <img src="img/rizzshop-logo.png" alt="RizzShop">
+      </a>
+    </div>
+
+    <a href="#account" class="footer-account">
+      <img src="img/account.png" alt="Akun">
+      <span>Akun</span>
+    </a>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

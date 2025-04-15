@@ -1,0 +1,21 @@
+{
+    "name": "RizzShop",
+    "short_name": "RizzShop",
+    "start_url": "/dashboard.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0066cc",
+    "icons": [
+      {
+        "src": "img/icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "img/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  

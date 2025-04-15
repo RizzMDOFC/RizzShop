@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RizzShop Login</title>
+  <link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#0066cc" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>  .reset-link {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .reset-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .reset-link a:hover {
+    text-decoration: underline;
+  }</style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="formTitle">Login</h1>
+    <input type="text" id="phone" placeholder="Nomor WhatsApp (08xxx)" />
+    <input type="password" id="password" placeholder="Password" />
+    <input type="text" id="otp" placeholder="OTP" />
+    <input type="text" id="username" placeholder="Username" style="display: none;" />
+    <button onclick="sendOTP()">Kirim OTP</button>
+    <button onclick="submitForm()">Login</button>
+    <!-- Tambahkan di bawah form login -->
+<div class="reset-link">
+  <a href="#" onclick="showResetPrompt()">Lupa Password?</a>
+</div>
+    <p id="toggleText">Belum punya akun? <span onclick="toggleForm()">Daftar di sini</span></p>
+    <button id="dashboardBtn" onclick="goToDashboard()" style="display: none;">Ke Dashboard</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+  

@@ -1,0 +1,234 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #00aaff, #0066cc);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+} 
+
+a:focus,
+a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* ==================== LOGIN / SIGNUP ==================== */
+.container {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 25px 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  color: #0066cc;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+#toggleText {
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+#toggleText span {
+  color: #ff0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#dashboardBtn {
+  display: none;
+  margin-top: 15px;
+  background-color: #00ffcc;
+  color: #003366;
+}
+
+/* ==================== DASHBOARD ==================== */
+.dashboard {
+  flex-grow: 1;
+  padding: 20px;
+  padding-bottom: 120px; /* Jarak bawah logo */
+}
+
+.dashboard h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.products {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.akun {
+  padding: 20px;
+  padding-bottom: 100px; /* Biar ga ketiban footer */
+  text-align: center;
+}
+
+/* ==================== FOOTER BAR ==================== */
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #00264d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 10;
+}
+
+
+.footer-spacer {
+  height: 70px;
+}
+
+
+.footer-bar::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 50px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  z-index: 0;
+}
+
+/* Footer icon umum */
+.footer-history,
+.footer-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.footer-history img,
+.footer-account img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1); /* <- ini bikin ikon hitam jadi putih */
+  margin-bottom: 4px;
+}
+
+
+.footer-history span,
+.footer-account span {
+  color: white;
+}
+
+/* Footer logo tengah */
+.footer-center {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -20px;
+  z-index: 30;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .dashboard h2 {
+    font-size: 1.3rem;
+  }
+
+  .footer-history img,
+  .footer-account img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer-center img:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* ==================== ANIMATION ==================== */
+@keyframes smoothPop {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-smooth-pop {
+  animation: smoothPop 0.3s ease-in-out;
+}
